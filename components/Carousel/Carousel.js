@@ -6,8 +6,15 @@ images[0].style.display = "block";
 console.log(buttons);
 console.log(images);
 
+function imageChange() {
+    for(let i = 1; i < images.length; i++) {
+        images[i-1].style.display = 'none';
+        images[i].style.display = 'block';
+    }
+}
+
 buttons.forEach(button => {
-    button.addEventListener('click', console.log("Clicked"));
+    button.addEventListener('click', imageChange);
 })
 
 /* If You've gotten this far, you're on your own! Although we will give you some hints:
