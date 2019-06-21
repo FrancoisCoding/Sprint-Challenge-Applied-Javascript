@@ -1,12 +1,14 @@
-class Carousel {
-
-}
-
 let carousel = document.querySelector(".carousel");
 let buttons = document.querySelectorAll(".button");
 let images = document.querySelectorAll(".cImages")
-console.log(buttons)
+images.forEach(image => image.style.width = "80%")
+images[0].style.display = "block";
+console.log(buttons);
 console.log(images);
+
+buttons.forEach(button => {
+    button.addEventListener('click', console.log("Clicked"));
+})
 
 /* If You've gotten this far, you're on your own! Although we will give you some hints:
     1. You will need to grab a reference to the carousel, and in it grab the left and right button.
