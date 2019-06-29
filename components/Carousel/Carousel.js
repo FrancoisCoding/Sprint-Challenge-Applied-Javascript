@@ -1,11 +1,24 @@
-class Carousel {
+let carousel = document.querySelector(".carousel");
+let buttons = document.querySelectorAll(".button");
+let images = document.querySelectorAll(".cImages")
+images.forEach(image => image.style.width = "80%")
+images[0].style.display = "block";
+console.log(buttons);
+console.log(images);
 
+function imageChange() {
+    for(let i = 1; i < images.length; i++) {
+        images[i-1].style.display = 'none';
+        images[i].style.display = 'block';
+    }
 }
 
-let carousel = document.querySelector();
+buttons.forEach(button => {
+    button.addEventListener('click', imageChange);
+})
 
 /* If You've gotten this far, you're on your own! Although we will give you some hints:
-    1. You will need to grab a reference to the carousel, and in it grab the left and right buttons
+    1. You will need to grab a reference to the carousel, and in it grab the left and right button.
     2. You will need to grab a reference to all of the images
     3. Create a current index
     4. Those buttons are gonna need some click handlers.
